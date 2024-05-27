@@ -32,6 +32,10 @@ public class StudentApplication {
               .lastName("jet")
               .matricule("24I00001")
               .programId("GI001")
+              .age(18)
+              .gender("Masculin")
+              .dateOfBirth(LocalDate.of(2000, 05, 22))
+              .comment("hehehehheh")
               .build());
       studentRepository.save(
           Student.builder()
@@ -40,6 +44,10 @@ public class StudentApplication {
               .lastName("Bienvenu")
               .matricule("24I00002")
               .programId("GL003")
+              .age(18)
+              .dateOfBirth(LocalDate.of(2000, 10, 10))
+              .gender("Masculin")
+              .comment("hehehehheh")
               .build());
       studentRepository.save(
           Student.builder()
@@ -48,6 +56,10 @@ public class StudentApplication {
               .lastName("Simon")
               .matricule("24I00003")
               .programId("GI002")
+              .age(18)
+              .dateOfBirth(LocalDate.of(1988, 5,01))
+              .gender("Masculin")
+              .comment("hehehehheh")
               .build());
 
       PaymentType[] paymentTypes = PaymentType.values();
@@ -58,7 +70,7 @@ public class StudentApplication {
           .forEach(
               st -> {
                 int index = random.nextInt(paymentTypes.length);
-                  int index2 = random.nextInt(paymentStatuses.length);
+                int index2 = random.nextInt(paymentStatuses.length);
                 for (int i = 0; i < 10; i++) {
                   paymentRepository.save(
                       Payment.builder()

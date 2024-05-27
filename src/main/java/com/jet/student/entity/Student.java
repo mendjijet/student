@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.*;
 
+import java.time.LocalDate;
+
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -19,5 +21,9 @@ public class Student {
   @Column(unique = true)
   private String matricule;
   private String programId;
+  private int age;
+  private LocalDate dateOfBirth;
+  private String gender;
+  private String comment;
   private String photo;
 }
